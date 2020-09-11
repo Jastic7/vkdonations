@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3825250C1DEE0053A2BC /* AppDelegate.swift */; };
 		55AC3828250C1DEE0053A2BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */; };
-		55AC382A250C1DEE0053A2BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3829250C1DEE0053A2BC /* ViewController.swift */; };
 		55AC382D250C1DEE0053A2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AC382B250C1DEE0053A2BC /* Main.storyboard */; };
 		55AC382F250C1DEF0053A2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55AC382E250C1DEF0053A2BC /* Assets.xcassets */; };
 		55AC3832250C1DEF0053A2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AC3830250C1DEF0053A2BC /* LaunchScreen.storyboard */; };
+		55AC383A250C223D0053A2BC /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3839250C223D0053A2BC /* PrimaryButton.swift */; };
+		55AC383C250C22AC0053A2BC /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC383B250C22AC0053A2BC /* Fonts.swift */; };
+		55AC383E250C23550053A2BC /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC383D250C23550053A2BC /* Colors.swift */; };
+		55AC3840250C25A80053A2BC /* DonationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC383F250C25A80053A2BC /* DonationsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55AC3822250C1DEE0053A2BC /* VKDonations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKDonations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC3825250C1DEE0053A2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55AC3829250C1DEE0053A2BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55AC382C250C1DEE0053A2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55AC382E250C1DEF0053A2BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55AC3831250C1DEF0053A2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55AC3833250C1DEF0053A2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55AC3839250C223D0053A2BC /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		55AC383B250C22AC0053A2BC /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		55AC383D250C23550053A2BC /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		55AC383F250C25A80053A2BC /* DonationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				55AC3825250C1DEE0053A2BC /* AppDelegate.swift */,
 				55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */,
-				55AC3829250C1DEE0053A2BC /* ViewController.swift */,
+				55AC383F250C25A80053A2BC /* DonationsViewController.swift */,
+				55AC3839250C223D0053A2BC /* PrimaryButton.swift */,
+				55AC383B250C22AC0053A2BC /* Fonts.swift */,
+				55AC383D250C23550053A2BC /* Colors.swift */,
 				55AC382B250C1DEE0053A2BC /* Main.storyboard */,
 				55AC382E250C1DEF0053A2BC /* Assets.xcassets */,
 				55AC3830250C1DEF0053A2BC /* LaunchScreen.storyboard */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55AC382A250C1DEE0053A2BC /* ViewController.swift in Sources */,
+				55AC383E250C23550053A2BC /* Colors.swift in Sources */,
+				55AC3840250C25A80053A2BC /* DonationsViewController.swift in Sources */,
+				55AC383C250C22AC0053A2BC /* Fonts.swift in Sources */,
 				55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */,
+				55AC383A250C223D0053A2BC /* PrimaryButton.swift in Sources */,
 				55AC3828250C1DEE0053A2BC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
