@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552AC121250C2E82006A904C /* DonationTypesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC120250C2E82006A904C /* DonationTypesViewController.swift */; };
+		552AC123250C2EB0006A904C /* DonationTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC122250C2EB0006A904C /* DonationTypeView.swift */; };
+		552AC125250C3332006A904C /* DonationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC124250C3332006A904C /* DonationType.swift */; };
 		55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3825250C1DEE0053A2BC /* AppDelegate.swift */; };
 		55AC3828250C1DEE0053A2BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */; };
 		55AC382D250C1DEE0053A2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AC382B250C1DEE0053A2BC /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		552AC120250C2E82006A904C /* DonationTypesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTypesViewController.swift; sourceTree = "<group>"; };
+		552AC122250C2EB0006A904C /* DonationTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTypeView.swift; sourceTree = "<group>"; };
+		552AC124250C3332006A904C /* DonationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationType.swift; sourceTree = "<group>"; };
 		55AC3822250C1DEE0053A2BC /* VKDonations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKDonations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC3825250C1DEE0053A2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552AC126250C3351006A904C /* DonationType */ = {
+			isa = PBXGroup;
+			children = (
+				552AC120250C2E82006A904C /* DonationTypesViewController.swift */,
+				552AC124250C3332006A904C /* DonationType.swift */,
+				552AC122250C2EB0006A904C /* DonationTypeView.swift */,
+			);
+			path = DonationType;
+			sourceTree = "<group>";
+		};
 		55AC3819250C1DEE0053A2BC = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +82,7 @@
 				55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */,
 				55AC383F250C25A80053A2BC /* DonationsViewController.swift */,
 				55AC3839250C223D0053A2BC /* PrimaryButton.swift */,
+				552AC126250C3351006A904C /* DonationType */,
 				55AC383B250C22AC0053A2BC /* Fonts.swift */,
 				55AC383D250C23550053A2BC /* Colors.swift */,
 				55AC382B250C1DEE0053A2BC /* Main.storyboard */,
@@ -147,11 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552AC125250C3332006A904C /* DonationType.swift in Sources */,
 				55AC383E250C23550053A2BC /* Colors.swift in Sources */,
 				55AC3840250C25A80053A2BC /* DonationsViewController.swift in Sources */,
+				552AC123250C2EB0006A904C /* DonationTypeView.swift in Sources */,
 				55AC383C250C22AC0053A2BC /* Fonts.swift in Sources */,
 				55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */,
 				55AC383A250C223D0053A2BC /* PrimaryButton.swift in Sources */,
+				552AC121250C2E82006A904C /* DonationTypesViewController.swift in Sources */,
 				55AC3828250C1DEE0053A2BC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

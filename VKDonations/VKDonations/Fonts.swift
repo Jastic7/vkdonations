@@ -20,4 +20,12 @@ extension UIFont {
     static var title3Medium: UIFont {
         .systemFont(ofSize: 17, weight: .medium)
     }
+
+    static var headlineSemibold: UIFont {
+        .systemFont(ofSize: 16, weight: .semibold)
+    }
+
+    static var caption1Regular: UIFont {
+        .systemFont(ofSize: 13, weight: .regular)
+    }
 }

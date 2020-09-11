@@ -28,4 +28,8 @@ extension UIColor {
     static var text: UIColor {
         .init(white: 0, alpha: 1)
     }
+
+    static var subhead: UIColor {
+        .init(red: 0.43, green: 0.47, blue: 0.52, alpha: 1)
+    }
 }

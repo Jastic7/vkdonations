@@ -22,6 +22,7 @@ final class DonationsViewController: UIViewController {
     lazy var donationCreateButton: PrimaryButton = {
         let button = PrimaryButton()
         button.setTitle("Создать сбор", for: .normal)
+        button.addTarget(self, action: #selector(createDonation(button:)), for: .touchUpInside)
         return button
     }()
 
@@ -37,6 +38,7 @@ final class DonationsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Пожертвования"
         setupSubviews()
     }
 
@@ -46,5 +48,14 @@ final class DonationsViewController: UIViewController {
             placeholderStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             placeholderStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+
+    @objc
+    func createDonation(button: PrimaryButton) {
+        let type1 = DonationType(title: "Целевой сбор", subtitle: "Когда есть определенная цель", iconName: "target_outline_28")
+        let type2 = DonationType(title: "Регулярный сбор", subtitle: "Если помощь нужна ежемесячно", iconName: "calendar_outline_28")
+
+        let viewController = DonationTypesViewController(donationTypes: [type1, type2])
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
