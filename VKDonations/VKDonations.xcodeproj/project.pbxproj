@@ -13,6 +13,8 @@
 		552AC128250C39C4006A904C /* GoalDonationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC127250C39C4006A904C /* GoalDonationTableViewController.swift */; };
 		552AC12D250C3A32006A904C /* InputFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC12C250C3A32006A904C /* InputFieldTableViewCell.swift */; };
 		552AC12F250C3A3C006A904C /* InputFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC12E250C3A3C006A904C /* InputFieldItem.swift */; };
+		552AC131250C5615006A904C /* UploadImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC130250C5615006A904C /* UploadImageTableViewCell.swift */; };
+		552AC133250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC132250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift */; };
 		55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3825250C1DEE0053A2BC /* AppDelegate.swift */; };
 		55AC3828250C1DEE0053A2BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */; };
 		55AC382D250C1DEE0053A2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AC382B250C1DEE0053A2BC /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		552AC127250C39C4006A904C /* GoalDonationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDonationTableViewController.swift; sourceTree = "<group>"; };
 		552AC12C250C3A32006A904C /* InputFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldTableViewCell.swift; sourceTree = "<group>"; };
 		552AC12E250C3A3C006A904C /* InputFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldItem.swift; sourceTree = "<group>"; };
+		552AC130250C5615006A904C /* UploadImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageTableViewCell.swift; sourceTree = "<group>"; };
+		552AC132250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
 		55AC3822250C1DEE0053A2BC /* VKDonations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKDonations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC3825250C1DEE0053A2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			children = (
 				55AC383B250C22AC0053A2BC /* Fonts.swift */,
 				55AC383D250C23550053A2BC /* Colors.swift */,
+				552AC132250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -88,6 +93,7 @@
 				55AC3839250C223D0053A2BC /* PrimaryButton.swift */,
 				552AC12C250C3A32006A904C /* InputFieldTableViewCell.swift */,
 				552AC12E250C3A3C006A904C /* InputFieldItem.swift */,
+				552AC130250C5615006A904C /* UploadImageTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,11 +208,13 @@
 				55AC383E250C23550053A2BC /* Colors.swift in Sources */,
 				552AC12D250C3A32006A904C /* InputFieldTableViewCell.swift in Sources */,
 				552AC128250C39C4006A904C /* GoalDonationTableViewController.swift in Sources */,
+				552AC133250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				55AC3840250C25A80053A2BC /* DonationsViewController.swift in Sources */,
 				552AC123250C2EB0006A904C /* DonationTypeView.swift in Sources */,
 				55AC383C250C22AC0053A2BC /* Fonts.swift in Sources */,
 				55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */,
 				55AC383A250C223D0053A2BC /* PrimaryButton.swift in Sources */,
+				552AC131250C5615006A904C /* UploadImageTableViewCell.swift in Sources */,
 				552AC121250C2E82006A904C /* DonationTypesViewController.swift in Sources */,
 				55AC3828250C1DEE0053A2BC /* SceneDelegate.swift in Sources */,
 			);

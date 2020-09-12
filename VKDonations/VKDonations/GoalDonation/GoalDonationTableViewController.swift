@@ -40,6 +40,7 @@ class GoalDonationTableViewController: UITableViewController {
         view.backgroundColor = .systemBackground
 
         tableView.register(InputFieldTableViewCell.self, forCellReuseIdentifier: InputFieldTableViewCell.reuseIdentifier)
+        tableView.register(UploadImageTableViewCell.self, forCellReuseIdentifier: UploadImageTableViewCell.reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         tableView.separatorStyle = .none
@@ -56,14 +57,16 @@ class GoalDonationTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        inputFieldItems.count
+        inputFieldItems.count + 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: InputFieldTableViewCell.reuseIdentifier, for: indexPath)
+        let reuseIdentifier = indexPath.row == 0 ? UploadImageTableViewCell.reuseIdentifier : InputFieldTableViewCell.reuseIdentifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+
 
         if let inputFieldCell = cell as? InputFieldTableViewCell {
-            let item = inputFieldItems[indexPath.row]
+            let item = inputFieldItems[indexPath.row - 1]
             inputFieldCell.configure(with: item)
         }
 

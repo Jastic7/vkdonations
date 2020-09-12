@@ -48,4 +48,8 @@ extension UIColor {
     static var background: UIColor {
         .init(red: 0.95, green: 0.95, blue: 0.96, alpha: 1)
     }
+
+    static var accent: UIColor {
+        .init(red: 0.25, green: 0.54, blue: 0.88, alpha: 1)
+    }
 }

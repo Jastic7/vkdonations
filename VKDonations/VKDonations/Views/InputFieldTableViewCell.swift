@@ -87,8 +87,6 @@ class InputFieldTableViewCell: UITableViewCell {
             textView.resignFirstResponder()
         }
     }
-
-    static let reuseIdentifier = String(describing: InputFieldTableViewCell.self)
 }
 
 extension InputFieldTableViewCell: UITextViewDelegate {

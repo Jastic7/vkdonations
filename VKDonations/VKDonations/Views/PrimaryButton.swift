@@ -35,6 +35,7 @@ final class PrimaryButton: UIButton {
 
         fadeLayer.frame = bounds
     }
+
     override var isHighlighted: Bool {
         didSet {
             fadeLayer.opacity = isHighlighted ? 1 : 0

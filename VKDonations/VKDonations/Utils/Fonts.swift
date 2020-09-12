@@ -29,6 +29,10 @@ extension UIFont {
         .systemFont(ofSize: 16, weight: .regular)
     }
 
+    static var headlineMedium: UIFont {
+        .systemFont(ofSize: 16, weight: .medium)
+    }
+
     static var caption1Regular: UIFont {
         .systemFont(ofSize: 13, weight: .regular)
     }
