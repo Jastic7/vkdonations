@@ -26,6 +26,8 @@ class InputFieldTableViewCell: UITableViewCell {
         textView.textColor = .placeholder
         textView.layer.backgroundColor = UIColor.background.cgColor
         textView.layer.cornerRadius = 10
+        textView.layer.borderWidth = 0.5
+        textView.layer.borderColor = UIColor.border.cgColor
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.isScrollEnabled = false
         textView.setContentCompressionResistancePriority(.required, for: .vertical)

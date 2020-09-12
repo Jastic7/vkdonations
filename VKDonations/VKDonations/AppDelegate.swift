@@ -14,7 +14,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let backImage = UIImage(named: "Back Icon")
+        UINavigationBar.appearance().backIndicatorImage = backImage
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
+        UINavigationBar.appearance().barTintColor = .systemBackground
+
+//        [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+//        [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+        UINavigationBar.appearance().shadowImage = UIImage()
+
+        
         return true
     }
 

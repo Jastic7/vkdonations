@@ -41,6 +41,8 @@ final class DonationsViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Пожертвования"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
         setupSubviews()
     }
 

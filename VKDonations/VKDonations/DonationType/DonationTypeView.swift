@@ -77,7 +77,9 @@ final class DonationTypeView: UIControl {
 
         backgroundColor = .contentTintBackground
         layer.cornerRadius = 10
-
+        layer.borderWidth = 0.33
+        layer.borderColor = UIColor.border.cgColor
+        
         setupSubviews()
     }
 
