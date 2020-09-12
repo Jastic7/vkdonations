@@ -11,9 +11,13 @@ import UIKit
 class GoalDonationTableViewController: UITableViewController {
 
     let inputFieldItems: [InputFieldItem]
+    let actionTitle: String
+    let action: () -> Void
 
-    init(inputFieldItems: [InputFieldItem]) {
+    init(inputFieldItems: [InputFieldItem], actionTitle: String, action: @escaping () -> Void) {
         self.inputFieldItems = inputFieldItems
+        self.actionTitle = actionTitle
+        self.action = action
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -22,10 +26,11 @@ class GoalDonationTableViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private let nextButton: PrimaryButton = {
+    private lazy var nextButton: PrimaryButton = {
         let button = PrimaryButton()
-        button.setTitle("Далее", for: .normal)
+        button.setTitle(actionTitle, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTapActionButton), for: .touchUpInside)
         return button
     }()
 
@@ -47,6 +52,8 @@ class GoalDonationTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 100
         tableView.separatorStyle = .none
         tableView.keyboardDismissMode = .onDrag
+
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         setupSubviews()
     }
@@ -93,5 +100,10 @@ class GoalDonationTableViewController: UITableViewController {
     override func viewDidLayoutSubviews() {
         tableView.contentInset = .init(top: 0, left: 0, bottom: bottomBar.frame.height, right: 0)
         tableView.scrollIndicatorInsets = tableView.contentInset
+    }
+
+    @objc
+    private func didTapActionButton() {
+        action()
     }
 }

@@ -15,6 +15,9 @@
 		552AC12F250C3A3C006A904C /* InputFieldItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC12E250C3A3C006A904C /* InputFieldItem.swift */; };
 		552AC131250C5615006A904C /* UploadImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC130250C5615006A904C /* UploadImageTableViewCell.swift */; };
 		552AC133250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552AC132250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift */; };
+		55396034250C6EB7006B375F /* DonationScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55396033250C6EB7006B375F /* DonationScreenType.swift */; };
+		55396036250C7087006B375F /* PostDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55396035250C7087006B375F /* PostDonationViewController.swift */; };
+		5539603B250C778D006B375F /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539603A250C778D006B375F /* EmptyViewController.swift */; };
 		55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3825250C1DEE0053A2BC /* AppDelegate.swift */; };
 		55AC3828250C1DEE0053A2BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */; };
 		55AC382D250C1DEE0053A2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55AC382B250C1DEE0053A2BC /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 		552AC12E250C3A3C006A904C /* InputFieldItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldItem.swift; sourceTree = "<group>"; };
 		552AC130250C5615006A904C /* UploadImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageTableViewCell.swift; sourceTree = "<group>"; };
 		552AC132250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		55396033250C6EB7006B375F /* DonationScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationScreenType.swift; sourceTree = "<group>"; };
+		55396035250C7087006B375F /* PostDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDonationViewController.swift; sourceTree = "<group>"; };
+		5539603A250C778D006B375F /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		55AC3822250C1DEE0053A2BC /* VKDonations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKDonations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AC3825250C1DEE0053A2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				552AC127250C39C4006A904C /* GoalDonationTableViewController.swift */,
+				55396033250C6EB7006B375F /* DonationScreenType.swift */,
 			);
 			path = GoalDonation;
 			sourceTree = "<group>";
@@ -98,6 +105,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		55396037250C708D006B375F /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				55396035250C7087006B375F /* PostDonationViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 		55AC3819250C1DEE0053A2BC = {
 			isa = PBXGroup;
 			children = (
@@ -120,9 +135,11 @@
 				55AC3825250C1DEE0053A2BC /* AppDelegate.swift */,
 				55AC3827250C1DEE0053A2BC /* SceneDelegate.swift */,
 				55AC383F250C25A80053A2BC /* DonationsViewController.swift */,
+				5539603A250C778D006B375F /* EmptyViewController.swift */,
 				552AC12B250C3A12006A904C /* Views */,
 				552AC129250C39FA006A904C /* GoalDonation */,
 				552AC126250C3351006A904C /* DonationType */,
+				55396037250C708D006B375F /* Post */,
 				552AC12A250C3A05006A904C /* Utils */,
 				55AC382B250C1DEE0053A2BC /* Main.storyboard */,
 				55AC382E250C1DEF0053A2BC /* Assets.xcassets */,
@@ -207,10 +224,13 @@
 				552AC12F250C3A3C006A904C /* InputFieldItem.swift in Sources */,
 				55AC383E250C23550053A2BC /* Colors.swift in Sources */,
 				552AC12D250C3A32006A904C /* InputFieldTableViewCell.swift in Sources */,
+				55396034250C6EB7006B375F /* DonationScreenType.swift in Sources */,
 				552AC128250C39C4006A904C /* GoalDonationTableViewController.swift in Sources */,
 				552AC133250C589D006A904C /* UITableViewCell+ReuseIdentifier.swift in Sources */,
 				55AC3840250C25A80053A2BC /* DonationsViewController.swift in Sources */,
+				55396036250C7087006B375F /* PostDonationViewController.swift in Sources */,
 				552AC123250C2EB0006A904C /* DonationTypeView.swift in Sources */,
+				5539603B250C778D006B375F /* EmptyViewController.swift in Sources */,
 				55AC383C250C22AC0053A2BC /* Fonts.swift in Sources */,
 				55AC3826250C1DEE0053A2BC /* AppDelegate.swift in Sources */,
 				55AC383A250C223D0053A2BC /* PrimaryButton.swift in Sources */,

@@ -68,10 +68,14 @@ final class DonationTypesViewController: UIViewController {
         let viewController: UIViewController?
 
         if donationTypeView.title == donationTypes.first?.title {
-            viewController = GoalDonationTableViewController(inputFieldItems: makeGoalDonatesItems())
+            viewController = GoalDonationTableViewController(inputFieldItems: makeGoalDonatesItems(), actionTitle: "Дальше") { [weak self] in
+                self?.showNextGoalDonationStep()
+            }
             viewController?.title = "Целевой сбор"
         } else if donationTypeView.title == donationTypes.last?.title {
-            viewController = GoalDonationTableViewController(inputFieldItems: makeRegularDonatesItems())
+            viewController = GoalDonationTableViewController(inputFieldItems: makeRegularDonatesItems(), actionTitle: "Создать сбор") { [weak self] in
+                self?.createRegularDonationCollecting()
+            }
             viewController?.title = "Регулярный сбор"
         } else {
             viewController = nil
@@ -94,5 +98,17 @@ final class DonationTypesViewController: UIViewController {
            let authorItem = InputFieldItem(title: "Автор", placeholder: "Автор", text: "Морозов Андрей")
 
            return makeGoalDonatesItems() + [authorItem]
-       }
+    }
+
+
+    private func showNextGoalDonationStep() {
+        let empty = EmptyViewController()
+        navigationController?.pushViewController(empty, animated: true)
+    }
+
+    private func createRegularDonationCollecting() {
+        let postViewController = PostDonationViewController()
+        let navigationController = UINavigationController(rootViewController: postViewController)
+        present(navigationController, animated: true, completion: nil)
+    }
 }
