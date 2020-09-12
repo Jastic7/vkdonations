@@ -24,6 +24,8 @@ final class DonationTypesViewController: UIViewController {
         self.donationTypes = donationTypes
 
         super.init(nibName: nil, bundle: nil)
+
+        title = "Тип сбора"
     }
 
     required init?(coder: NSCoder) {
@@ -62,6 +64,12 @@ final class DonationTypesViewController: UIViewController {
 
     @objc
     private func didSelect(donationTypeView: DonationTypeView) {
-        print(donationTypeView.title)
+        if donationTypeView.title == donationTypes.first?.title {
+            let goalDonationViewController = GoalDonationTableViewController()
+            goalDonationViewController.title = "Целевой сбор"
+            navigationController?.pushViewController(goalDonationViewController, animated: true)
+        } else if donationTypeView.title == donationTypes.last?.title {
+
+        }
     }
 }

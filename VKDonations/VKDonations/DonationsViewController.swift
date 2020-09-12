@@ -23,6 +23,8 @@ final class DonationsViewController: UIViewController {
         let button = PrimaryButton()
         button.setTitle("Создать сбор", for: .normal)
         button.addTarget(self, action: #selector(createDonation(button:)), for: .touchUpInside)
+        button.titleLabel?.font = .textMedium
+        button.contentEdgeInsets = .init(top: 8, left: 16, bottom: 8, right: 16)
         return button
     }()
 

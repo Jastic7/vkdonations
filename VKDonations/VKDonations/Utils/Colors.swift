@@ -25,11 +25,27 @@ extension UIColor {
         .init(white: 0, alpha: 0.08)
     }
 
+    static var border: UIColor {
+        .init(white: 0, alpha: 0.12)
+    }
+
     static var text: UIColor {
         .init(white: 0, alpha: 1)
     }
 
     static var subhead: UIColor {
         .init(red: 0.43, green: 0.47, blue: 0.52, alpha: 1)
+    }
+
+    static var placeholder: UIColor {
+        .init(red: 0.51, green: 0.55, blue: 0.6, alpha: 1)
+    }
+
+    static var contentTintBackground: UIColor {
+        .init(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
+    }
+
+    static var background: UIColor {
+        .init(red: 0.95, green: 0.95, blue: 0.96, alpha: 1)
     }
 }

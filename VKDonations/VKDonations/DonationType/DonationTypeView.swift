@@ -75,7 +75,7 @@ final class DonationTypeView: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        backgroundColor = .imageBorder
+        backgroundColor = .contentTintBackground
         layer.cornerRadius = 10
 
         setupSubviews()

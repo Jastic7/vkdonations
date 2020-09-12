@@ -25,7 +25,15 @@ extension UIFont {
         .systemFont(ofSize: 16, weight: .semibold)
     }
 
+    static var headlineRegular: UIFont {
+        .systemFont(ofSize: 16, weight: .regular)
+    }
+
     static var caption1Regular: UIFont {
         .systemFont(ofSize: 13, weight: .regular)
+    }
+
+    static var subheadRegular: UIFont {
+        .systemFont(ofSize: 14, weight: .regular)
     }
 }
