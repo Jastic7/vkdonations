@@ -52,6 +52,8 @@ class GoalDonationTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 100
         tableView.separatorStyle = .none
         tableView.keyboardDismissMode = .onDrag
+        tableView.contentInset = .init(top: 0, left: 0, bottom: 102, right: 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset
 
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
@@ -93,13 +95,8 @@ class GoalDonationTableViewController: UITableViewController {
             bottomBar.topAnchor.constraint(equalTo: nextButton.topAnchor, constant: -12),
             bottomBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             bottomBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            bottomBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomBar.heightAnchor.constraint(equalToConstant: 102)
         ])
-    }
-
-    override func viewDidLayoutSubviews() {
-        tableView.contentInset = .init(top: 0, left: 0, bottom: bottomBar.frame.height, right: 0)
-        tableView.scrollIndicatorInsets = tableView.contentInset
     }
 
     @objc

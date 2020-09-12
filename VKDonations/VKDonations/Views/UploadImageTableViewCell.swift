@@ -77,7 +77,6 @@ final class UploadImageTableViewCell: UITableViewCell {
             stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
         ])
 
-
         contentView.addSubview(uploadedImageView)
 
         layer.addSublayer(borderLayer)
@@ -88,7 +87,7 @@ final class UploadImageTableViewCell: UITableViewCell {
 
         borderLayer.frame = bounds
 
-        let rect = bounds.inset(by: .init(top: 2, left: 12, bottom: 12, right: 12))
+        let rect = contentView.bounds.inset(by: .init(top: 2, left: 12, bottom: 12, right: 12))
         borderLayer.path = UIBezierPath(roundedRect: rect, cornerRadius: 10).cgPath
 
         uploadedImageView.frame = rect
