@@ -64,12 +64,34 @@ final class DonationTypesViewController: UIViewController {
 
     @objc
     private func didSelect(donationTypeView: DonationTypeView) {
-        if donationTypeView.title == donationTypes.first?.title {
-            let goalDonationViewController = GoalDonationTableViewController()
-            goalDonationViewController.title = "Целевой сбор"
-            navigationController?.pushViewController(goalDonationViewController, animated: true)
-        } else if donationTypeView.title == donationTypes.last?.title {
+        let viewController: UIViewController?
 
+        if donationTypeView.title == donationTypes.first?.title {
+            viewController = GoalDonationTableViewController(inputFieldItems: makeGoalDonatesItems())
+            viewController?.title = "Целевой сбор"
+        } else if donationTypeView.title == donationTypes.last?.title {
+            viewController = GoalDonationTableViewController(inputFieldItems: makeRegularDonatesItems())
+            viewController?.title = "Регулярный сбор"
+        } else {
+            viewController = nil
         }
+
+        viewController.map { navigationController?.pushViewController($0, animated: true) }
     }
+
+    private func makeGoalDonatesItems() -> [InputFieldItem] {
+        let nameItem = InputFieldItem(title: "Название сбора", placeholder: "Название сбора")
+        let amountItem = InputFieldItem(title: "Сумма, ₽", placeholder: "Сколько нужно собрать?")
+        let goalItem = InputFieldItem(title: "Цель", placeholder: "Например, лечение человека")
+        let descriptionItem = InputFieldItem(title: "Описание", placeholder: "На что пойдут деньги и как они кому-то помогут?")
+        let destinationItem = InputFieldItem(title: "Куда получать деньги", placeholder: "Счет зачисления", text: "Счёт VK Pay · 1234")
+
+        return [nameItem, amountItem, goalItem, descriptionItem, destinationItem]
+    }
+
+    private func makeRegularDonatesItems() -> [InputFieldItem] {
+           let authorItem = InputFieldItem(title: "Автор", placeholder: "Автор", text: "Морозов Андрей")
+
+           return makeGoalDonatesItems() + [authorItem]
+       }
 }

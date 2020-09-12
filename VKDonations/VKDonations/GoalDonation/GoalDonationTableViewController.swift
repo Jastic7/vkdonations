@@ -10,15 +10,17 @@ import UIKit
 
 class GoalDonationTableViewController: UITableViewController {
 
-    let inputFieldItems: [InputFieldItem] = {
-        let nameItem = InputFieldItem(title: "Название сбора", placeholder: "Название сбора")
-        let amountItem = InputFieldItem(title: "Сумма, ₽", placeholder: "Сколько нужно собрать?")
-        let goalItem = InputFieldItem(title: "Цель", placeholder: "Например, лечение человека")
-        let descriptionItem = InputFieldItem(title: "Описание", placeholder: "На что пойдут деньги и как они кому-то помогут?")
-        let destinationItem = InputFieldItem(title: "Куда получать деньги", placeholder: "", text: "Счёт VK Pay · 1234")
+    let inputFieldItems: [InputFieldItem]
 
-        return [nameItem, amountItem, goalItem, descriptionItem, destinationItem]
-    }()
+    init(inputFieldItems: [InputFieldItem]) {
+        self.inputFieldItems = inputFieldItems
+
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     private let nextButton: PrimaryButton = {
         let button = PrimaryButton()
@@ -44,7 +46,6 @@ class GoalDonationTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         tableView.separatorStyle = .none
-        tableView.contentInset = .init(top: 0, left: 0, bottom: 102, right: 0)
         tableView.keyboardDismissMode = .onDrag
 
         setupSubviews()
@@ -87,5 +88,10 @@ class GoalDonationTableViewController: UITableViewController {
             bottomBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             bottomBar.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+    }
+
+    override func viewDidLayoutSubviews() {
+        tableView.contentInset = .init(top: 0, left: 0, bottom: bottomBar.frame.height, right: 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset
     }
 }
